@@ -1,5 +1,6 @@
 var express = require("express"),
     app = express(),
+    path = require('path'),
     fs = require('fs'),
     bodyParser = require('body-parser'),
     errorHandler = require('errorhandler'),
@@ -30,10 +31,26 @@ app.post("/share", function (req, res) {
 });
 
 app.get("/text", function (req, res) {
-    fs.readFile(__dirname+"/tmp/share.txt",'utf8', function (err, data) {
-        if (err) throw err;
-        res.json({'text':data});
-    });
+    path.exists(__dirname+"/tmp/share.txt", function(exists){
+        if(exists){
+            fs.readFile(__dirname+"/tmp/share.txt",'utf8', function (err, data) {
+                if (err) throw err;
+                res.json({'text':data});
+            });
+        }
+        else{
+            fs.writeFile(__dirname+"/tmp/share.txt", "", function(err) {
+                if(err) {
+                    console.log(err);
+                } else {
+                    console.log("The file was saved!");
+                }
+            });
+
+        }
+    })
+
+
 
 
 });
