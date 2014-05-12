@@ -14,7 +14,11 @@ var express = require("express"),
         showStack: true
     }));
 
-console.log(__dirname);
+
+
+if(!fs.existsSync(__dirname+"/tmp")){
+    fs.mkdirSync(__dirname+"/tmp");
+}
 
 app.post("/share", function (req, res) {
         var text = req.body.text;
