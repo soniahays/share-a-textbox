@@ -1,0 +1,21 @@
+{
+  "name": "should-i-wear-a-coat",
+  "version": "0.0.0",
+  "authors": [
+    "Sonia Brahmi <7sonia@gmail.com>"
+  ],
+  "main": "app.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.1.1"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "should-i-wear-a-coat",
+  "version": "0.0.0",
+  "description": "minimal implementation of the Ultimate Weather Forecasts API https://www.mashape.com/george-vustrey/ultimate-weather-forecasts#!documentation letting you know whether or not you should wear your jacket.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "soniabrami",
+  "license": "MIT",
+  "dependencies": {
+    "express": "~4.1.2",
+    "body-parser": "~1.1.1",
+    "errorhandler": "~1.0.1",
+    "method-override": "~1.0.0",
+    "unirest": "~0.2.6"
+  }
+}
